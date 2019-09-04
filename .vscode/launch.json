@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos 
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "preLaunchTask": "build-full",
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "cwd": "${workspaceFolder}/server",
+            "program": "${workspaceFolder}\/server\/dist\/server\/src\/server",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            }
+        }
+    ]
+}

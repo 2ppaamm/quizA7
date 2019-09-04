@@ -1,0 +1,5 @@
+<div class="test-advance-container">
+    <div *ngFor="let _unused of Arr(count).fill(1); let i = index" class="test-advance-question"
+        [ngClass]="{ 'answered': i < successAnswers.length, 'correct': successAnswers[i] }">
+    </div>
+</div>

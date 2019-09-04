@@ -1,0 +1,37 @@
+.options {
+    margin-top: 18px;
+}
+
+.answer {
+    display: inline-block;
+    font-size: 1.1em;
+    width: 90%;
+    border: 2px solid rgba(238, 189, 102, 0.4);
+    padding: 10px;
+    margin: 0px 15px 15px 0px;
+    cursor: pointer;
+    font-weight: 400;
+
+    label {
+        cursor: pointer;
+    }
+
+    &:hover {
+        background-color: rgba(238, 189, 102, 0.2);
+    }
+
+    &.readonly,
+    &.readonly:hover {
+        background-color: white;
+        cursor: default;
+        pointer-events: none;
+    }
+}
+
+.wrongAnswer {
+    border-color: #be4616;
+}
+
+.correctAnswer {
+    border-color: #459a2e;
+}

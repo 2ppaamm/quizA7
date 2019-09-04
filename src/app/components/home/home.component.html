@@ -1,0 +1,13 @@
+<div class="home-container">
+    <div class="welcome">Welcome</div>
+    <p class="text">Click to start Adaptive Kindergarten to Primary Six Math course</p>
+
+    <div *ngIf="!loading">
+        <div class="start" (click)="login()" *ngIf="!isAuthenticated" [ngClass]="{'loginIn': isLoginIn}">START
+            <i class="fa fa-chevron-right sign"></i>
+        </div>
+    </div>
+    <div *ngIf="loading">
+        <mat-progress-spinner diameter="40" mode="indeterminate"></mat-progress-spinner>
+    </div>
+</div>

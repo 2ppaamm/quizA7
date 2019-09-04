@@ -1,0 +1,22 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-full",
+            "type": "npm",
+            "script": "build_full",
+            "path": "server/",
+            "problemMatcher": [
+                "$tsc"
+            ],
+            "isBackground": false,
+            "options": {
+                "env": {
+                    "NODE_ENV": "development"
+                }
+            }
+        }
+    ]
+}

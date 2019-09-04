@@ -1,0 +1,74 @@
+.literally {
+    width: -webkit-calc(100% - 5px);
+    width: -moz-calc(100% - 5px);
+    width: calc(100% - 5px);
+    height: 1500px;
+    min-height: 300px;
+    position: relative;
+    background-color: transparent;
+
+    bottom: 0;
+    background: white url(assets/img/paper.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.literally .color-picker-popup {
+    position: absolute;
+    left: 30px;
+}
+
+i.btn-i {
+    padding: 4px;
+}
+
+.lc-clear {
+    position: fixed !important;
+    top: 0px !important;
+    left: 0px;
+    background-color: #960000;
+    color: white;
+}
+
+.color-row.label {
+    color: black;
+    font-size: 10px;
+}
+
+.literally .lc-picker {
+    top: 25px;
+    border-right: none;
+    background-color: rgba(0, 0, 0, 0.05);
+    width: 30px;
+    position: fixed;
+}
+
+.literally .color-well {
+    width: 30px;
+}
+
+.literally .lc-picker .toolbar-button.selected:not(.disabled) {
+    background-color: rgba(150, 0, 0, 0.2);
+}
+
+.literally.toolbar-at-top .lc-options {
+    bottom: 0;
+    top: auto;
+    border-bottom: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.05);
+    z-index: 40;
+}
+
+.literally .lc-drawing.with-gui {
+    right: 0;
+    top: 0;
+    position: absolute;
+    bottom: 30px;
+    cursor: default;
+    z-index: 40;
+}
+
+.literally .lc-options.horz-toolbar {
+    position: fixed;
+    bottom: 0;
+}

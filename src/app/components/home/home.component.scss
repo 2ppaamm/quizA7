@@ -1,0 +1,70 @@
+.home-container {
+    margin-top: 65px;
+    line-height: normal;
+}
+
+.welcome {
+    color: rgb(0, 0, 0);
+    font-size: 2.5em;
+    margin: 0px;
+    font-weight: 100;
+    font-family: Roboto, sans-serif;
+}
+
+.text {
+    margin-bottom: 40px;
+}
+
+.start {
+    background-color: rgb(150, 0, 0);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15px;
+    text-decoration-color: rgb(255, 255, 255);
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    user-select: none;
+    visibility: visible;
+}
+
+.start.loginIn {
+    background-color: #c19a9a;
+    pointer-events: none;
+    cursor: default;
+}
+
+.sign {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 32px;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: 400;
+    height: 32px;
+    line-height: 32px;
+    text-rendering: auto;
+    user-select: none;
+    visibility: visible;
+    width: 22.8625px;
+    -webkit-font-smoothing: antialiased;
+}
+
+@media screen and (max-width: 650px) {
+    .home-container {
+        margin-top: 13px;
+        width: 94%;
+    }
+}

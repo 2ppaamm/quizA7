@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        // client
+        // "client/node_modules": true,
+        // server,
+        //"server/node_modules": true
+    },
+    "prettier.tslintIntegration": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    }
+}

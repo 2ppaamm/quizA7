@@ -1,0 +1,19 @@
+<div *ngIf="result" class="results visibilityhide active">
+    <h3 class="result-title">Results</h3>
+
+    <p>{{result.message}}</p>
+    <p>You scored {{result.score | number : '1.2-2'}}% and {{result.kudos}} kudos for the latest test
+        <span *ngIf="result.maxile > 0">
+            , and now your maxile level is {{result.maxile | number : '1.2-2'}}
+        </span>
+        .
+    </p>
+    <div>What do you want to do next?</div>
+    <div>
+        <a class="btn doMore" (click)="startAgain()" href="#">
+            {{ isDiagnosticTest ? 'Do daily tests' : 'Do again' }}</a>
+    </div>
+    <div>
+        <a class="btn end" (click)="finish()" href="javascript:return false;">End Test</a>
+    </div>
+</div>

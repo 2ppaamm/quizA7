@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>Confirmación</h2>
+
+<div>
+    <mat-dialog-content>
+        <!-- ¿Realmente desea confirmar el evento? -->
+        {{ text }}
+    </mat-dialog-content>
+    <mat-dialog-actions fxLayout="row" fxLayoutAlign="end center">
+        <button mat-button type="button" (click)="save($event)">Aceptar</button>
+        <button mat-button type="button" (click)="onNoClick($event)">Cancelar</button>
+    </mat-dialog-actions>
+</div>

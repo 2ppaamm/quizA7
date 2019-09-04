@@ -1,0 +1,12 @@
+<div>
+
+    <app-test-question *ngIf="hasQuestion" [question]="question" (onInputChange)="onInputChange($event)"
+        [answered]="currAnswered" (onInputEnter)="onInputEnter($event)">
+    </app-test-question>
+
+    <app-test-question-image *ngIf="hasImage()" [questionImageSrc]="getCurrImageSrc()"></app-test-question-image>
+
+    <div class="submit-btn" *ngIf="!currAnswered">
+        <p (click)="commitAnswer()" class="keybtn">Submit</p>
+    </div>
+</div>

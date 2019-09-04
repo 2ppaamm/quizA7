@@ -1,0 +1,30 @@
+<div *ngIf="!loading" class="test-container">
+    <app-test-advance [count]="getQuestionsCount()" [current]="current" [successAnswers]="getSuccessAnswers()">
+    </app-test-advance>
+
+    <div [hidden]="!isCalculatorAllowed()">
+        <label class="calculator-allowed-msg">Calculator allowed</label>
+    </div>
+
+    <div class="curr-question" [ngClass]="{ 'extra-margin-top': !isCalculatorAllowed()}" *ngIf="getCurrQuestion()">
+        <div *ngIf="isInputType(getCurrQuestion())">
+            <app-input-test [question]="getCurrQuestion()" (answered)="onAnswered($event)"></app-input-test>
+        </div>
+        <div *ngIf="isOptionType(getCurrQuestion())">
+            <app-options-test [question]="getCurrQuestion()" (answered)="onAnswered($event)"></app-options-test>
+        </div>
+    </div>
+
+    <div class="feedback" *ngIf="currAnswered">
+        <p *ngIf="currCorrect">You are <label class="strong">correct</label>!</p>
+        <p *ngIf="!currCorrect">Oops! That is <label class="strong">not correct.</label></p>
+
+        <div>
+            <button class="nextBtn" (click)="next()">Continue</button>
+        </div>
+    </div>
+
+</div>
+<div *ngIf="loading">
+    <mat-progress-spinner diameter="40" mode="indeterminate"></mat-progress-spinner>
+</div>

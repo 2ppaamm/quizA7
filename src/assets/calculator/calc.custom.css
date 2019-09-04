@@ -1,0 +1,57 @@
+#calc {
+    position: fixed;
+    bottom: 2.3em;
+    right: 0px;
+    background-color: #ddd;
+    font-size: 13px;
+    margin: 0;
+    color: #555;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    z-index: 1001;
+}
+
+#calc input {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 5px;
+}
+
+#calc cell {
+    width: 20%;
+    font-weight: bold;
+}
+
+#calc #results {
+    width: 250px;
+    background-color: #ccc;
+    height: 1.5em;
+    margin: 5px;
+    padding: 3px;
+}
+
+#calc .calcbttn {
+    border: 0px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif, sans-serif;
+    color: #666;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 13px;
+    background-repeat: no-repeat;
+    background: #eee;
+    background: -webkit-linear-gradient(#fff, #eee);
+    background: -moz-linear-gradient(top, #fff, #eee);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee');
+}
+
+#calc #errmsg {
+    display: none;
+    background-color: #960000;
+    color: #fff;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #960000;
+    font-weight: bold;
+}

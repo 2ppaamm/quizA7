@@ -1,0 +1,24 @@
+<div>
+    <app-test-question [question]="question"></app-test-question>
+
+    <app-test-question-image *ngIf="hasImage()" [questionImageSrc]="getCurrImageSrc()"></app-test-question-image>
+
+    <div class="options">
+        <div *ngFor="let option of options; let i = index" (click)="selectAnswer(i)">
+            <div *ngIf="getOptionsType(i)=='text'" class="answer"
+                [ngClass]="{ 'correctAnswer': isAnswered && correctIndex == i, 'wrongAnswer': isAnswered && selectedIndex == i, 'readonly': isAnswered }">
+                <div *ngIf="isKatexOption()">
+                    <ng-katex [equation]="getKatexEquation(option)"></ng-katex>
+                </div>
+                <div *ngIf="!isKatexOption()">
+                    <label>{{option}}</label>
+                </div>
+            </div>
+
+            <div *ngIf="getOptionsType(i)=='image'">
+                <!-- <img src="option" /> -->
+                <label>{{option}}</label>
+            </div>
+        </div>
+    </div>
+</div>

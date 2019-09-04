@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Adaptive Math Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <base href="/">
+    <link rel="icon" href="faith.png">
+    <link rel="preload" href="assets/img/loading-spinner.svg?p=0" as="image">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css"
+        integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js"
+        integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="ng-app-container">
+        <div class="ng-app">
+            <app-root>
+                <div style="position: absolute;top: 50%;left: 50%;">
+                    <img src="assets/img/loading-spinner.svg?p=0">
+                </div>
+            </app-root>
+        </div>
+    </div>
+
+    <div hidden="true" id="calc">
+        <div id="errmsg"></div>
+        <div id="results"></div>
+        <table style="width:250px;">
+            <tbody>
+                <tr>
+                    <td class="cell"><input type="button" class="calcbttn" value="7" id="7"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="8" id="8"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="9" id="9"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="/" id="divide"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="(" id="parenleft"></td>
+                </tr>
+
+                <tr>
+                    <td class="cell"><input type="button" class="calcbttn" value="4" id="4"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="5" id="5"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="6" id="6"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="*" id="multiply"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value=")" id="parenright"></td>
+                </tr>
+                <tr>
+                    <td class="cell"><input type="button" class="calcbttn" value="1" id="1"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="2" id="2"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="3" id="3"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="+" id="plus"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="C" id="clear"></td>
+                </tr>
+                <tr>
+                    <td class="cell"><input type="button" class="calcbttn" value="0" id="0"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="." id="decimal"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="-" id="minus"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="^" id="^"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="=" id="evaluate"></td>
+                </tr>
+                <tr>
+                    <td class="cell"><input type="button" class="calcbttn" value="abs" id="abs"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="sin" id="sin"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="cos" id="cos"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="tan" id="tan"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="del" id="del"></td>
+                </tr>
+                <tr>
+                    <td class="cell"><input type="button" class="calcbttn" value="log10" id="log10"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="log2" id="log2"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="ln" id="ln"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="pi" id="pi"></td>
+                    <td class="cell"><input type="button" class="calcbttn" value="sqrt" id="sqrt"></td>
+                </tr>
+            </tbody>
+        </table>
+        <input type="radio" name="raddeg" value="radians" id="radians_rb"> Radians
+        <input type="radio" name="raddeg" value="degrees" checked="" id="degrees_rb"> degrees
+        <!-- REMOVING THE TEXT BELOW VIOLATES THE TOS OF USING THIS SCRIPT -->
+        <span style="font-size:8px; font-style:italic;">by www.meta-calculator.com</span>
+    </div>
+
+    <div class="fs-container" hidden="true" id="board">
+        <div id="lc"></div>
+    </div>
+
+    <script>
+        window.WebFontConfig = {
+            custom: {
+                families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7',
+                    'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script',
+                    'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3',
+                    'KaTeX_Size4', 'KaTeX_Typewriter'],
+            },
+        };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"
+        integrity="sha256-4O4pS1SH31ZqrSO2A/2QJTVjTPqVe+jnYgOWUVr7EEc=" crossorigin="anonymous"></script>
+</body>
+
+</html>

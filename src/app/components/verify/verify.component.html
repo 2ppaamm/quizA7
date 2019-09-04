@@ -1,0 +1,41 @@
+<div class="container-verify">
+    <div class="title">
+        Mastercode Registration Needed
+    </div>
+    <form [formGroup]="form" ngNoForm>
+        <input type="number" class="mastercode input-field" placeholder="Mastercode" required
+            formControlName="mastercode">
+        <div *ngIf="form.controls.mastercode.invalid&&form.controls.mastercode.dirty" class="msg_error"
+            style="color: #f84856; font-size: 12px;">
+            Enter a valid master code
+        </div>
+        <div>
+            <div>
+                <input type="text" placeholder="First Name" class="input-field" required formControlName="firstname">
+                <div *ngIf="form.controls.firstname.invalid&&form.controls.firstname.dirty" class="msg_error"
+                    style="color: #f84856; font-size: 12px;">
+                    First name is required
+                </div>
+            </div>
+            <div>
+                <input type="text" placeholder="Last Name" class="input-field" required formControlName="lastname">
+                <div *ngIf="form.controls.lastname.invalid&&form.controls.lastname.dirty" class="msg_error"
+                    style="color: #f84856; font-size: 12px;">
+                    Last name is required
+                </div>
+            </div>
+            <div>
+                <input type="datetime" placeholder="Birthdate in mm/dd/yyyy" class="input-field" required
+                    pattern="^(0[1-9]|1[0-2])/(0[1-9]|[12]\d|3[01])/[12]\d{3}$" formControlName="birthdate">
+                <div *ngIf="form.controls.birthdate.invalid&&form.controls.birthdate.dirty" class="msg_error"
+                    style="color: #f84856; font-size: 12px;">
+                    Birth date is required and in mm/dd/yyyy format
+                </div>
+            </div>
+        </div>
+
+        <button class="startbtn" [disabled]="form.invalid || sending" (click)="sendMastercode()">SUBMIT <i
+                class="fa fa-chevron-right"></i></button>
+        <div *ngIf="errorMessage" style="color: #f84856; font-size: 12px;">{{errorMessage}}</div>
+    </form>
+</div>

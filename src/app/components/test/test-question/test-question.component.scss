@@ -1,0 +1,36 @@
+.test-question {
+    font-size: 1.4em;
+    margin-top: -10px;
+}
+
+.test-question input.lineinput {
+    width: 175px;
+    font-size: 1.4em;
+    border: 2px solid rgba(238, 189, 102, 0.4);
+    padding: 10px;
+    margin: 0px 15px 15px 0px;
+    background-color: white;
+    line-height: normal;
+}
+
+.test-question.answered input.lineinput {
+    pointer-events: none;
+}
+
+@media screen and (max-width: 650px) {
+    .test-question {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .test-question {
+        width: 330px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .test-question {
+        width: 250px;
+    }
+}

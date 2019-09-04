@@ -1,0 +1,9 @@
+{
+    "/test/*": {
+        "target": "http://devapi.pamelalim.me",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true,
+        "pathRewrite": {}
+    }
+}

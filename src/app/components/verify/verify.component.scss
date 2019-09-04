@@ -1,0 +1,68 @@
+.container-verify {
+    margin-top: 60px;
+}
+
+.container-verify .title {
+    font-size: 2.1em;
+    margin: 0px;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 650px) {
+    .container-verify .title {
+        font-size: 2.2em;
+        margin-bottom: 15px;
+    }
+}
+
+.input-field {
+    display: inline-block;
+    font-size: 1em;
+    width: 100%;
+    border: 2px solid rgba(238, 189, 102, 0.4);
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 15px;
+    position: relative;
+}
+
+input.input-field.mastercode {
+    font-size: 2.2em;
+    margin-top: 0px;
+    line-height: normal;
+}
+
+input.input-field.ng-touched.ng-dirty.ng-invalid {
+    border-color: red;
+}
+
+.startbtn {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #960000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    padding: 15px 25px;
+    margin-top: 75px;
+    border-color: transparent;
+}
+
+.startbtn:disabled {
+    background-color: #96000057;
+}
+
+@media screen and (max-width: 650px) {
+    .container-verify {
+        margin-top: 10px;
+    }
+
+    .input-field {
+        width: 80%;
+    }
+
+    input.input-field.mastercode {
+        margin-top: -12px;
+        margin-bottom: 15px;
+    }
+}
